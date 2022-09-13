@@ -34,6 +34,7 @@ public class SecurityConf extends WebSecurityConfigurerAdapter {
             .antMatchers(HttpMethod.GET , "/candidates**").permitAll()
             .antMatchers(HttpMethod.GET , "/year**").permitAll()
             .antMatchers(HttpMethod.PUT , "/contest/**").hasRole(User.Roles.ADMIN.toString())
+            .antMatchers(HttpMethod.POST , "/login/**").hasRole(User.Roles.VISITOR.toString())
             .antMatchers(HttpMethod.POST, "/contest/**").hasRole(User.Roles.ADMIN.toString())
             .antMatchers(HttpMethod.PATCH, "/contest/**").hasRole(User.Roles.ADMIN.toString())
             .antMatchers(HttpMethod.DELETE, "/contest/**").hasRole(User.Roles.ADMIN.toString())

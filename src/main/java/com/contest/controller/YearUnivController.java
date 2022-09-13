@@ -21,7 +21,6 @@ import java.util.List;
 public class YearUnivController {
 
   private final YearUnivService yearUnivService;
-
   @GetMapping
   public List<YearUniv> getAll(
           @RequestParam int page ,

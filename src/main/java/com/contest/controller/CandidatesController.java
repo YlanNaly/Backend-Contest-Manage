@@ -83,7 +83,7 @@ public class CandidatesController {
             .toList();
   }
   @GetMapping("/date/{date}")
-  public com.contest.model.Candidates getAllByYear(
+  public com.contest.model.Candidates getCandidateByIdContest(
           @PathVariable Long date
   ){
     return service.findAllByContestId(Integer.parseInt(String.valueOf(date)));
